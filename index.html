@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Irish App</title>
+  </head>
+  <body id="background-image">
+    <div id="container">
+      <!-- 최상단 => 시간 API && 환영 문구 -->
+      <div class="top">
+
+        <!-- 시간 API -->
+        <div id="topClock">
+          <h1 id="clock">00:00:00</h1>
+        </div> 
+
+        <!-- Welcome 메시지 -->
+        <div id="topWelcome">
+          <h1 id="welcome">Welcome! This is Irish's Web Page.</h1>
+        </div>
+
+        <!-- 로그인 및 로그아웃 관련 DIV -->
+        <div id="login">
+          <!-- 로그인 폼 -->
+          <form action id="login-form">
+            <div id="inputBox">
+              <input
+              required
+              maxlength="5"
+              type="text"
+              placeholder="아이디를 입력하세요"
+              />
+
+            </div>
+
+            <div id="loginBox">
+              <input type="submit" value="Log In" />
+            </div>
+          </form>
+          
+          <!-- 로그아웃 폼 -->
+          <form action id="logoutBtn" class="hidden">
+            <div id="divGreeting">
+              <h1 id="greeting" class="hidden"></h1>
+            </div>
+
+            <div id="logoutBox">
+              <input type="submit" value="Log Out" />
+            </div>
+          </form>
+
+        </div>
+      </div>
+  
+      <!-- 좌측 상단 =>  프로필 -->
+      <div class="leftTop">
+        <!-- 프로필 이미지 -->
+        <div id="profileImg"></div>
+
+        <!-- 프로필 내용 -->
+        <div id="profileContents">
+          <h1>🙋🏻‍♂️ Information</h1>
+          <p>Name.  박창영</p>
+          <p>Email.   parkcy0630@gmail.com</p>
+          
+          <h1>💻 Skill</h1>
+          <p>Language > JavaScript, Java, Python, PHP / HTML5, CSS3 </p>
+          <p>Front-End > Nexacro </p>
+          <p>Back-End >  Spring Boot</p>
+          <p>WAS > Tomcat </p>
+          <p>RDB > Oracle, MySQL </p>
+          <p>Configuration > SVN, Git </p>
+          <p>Dev-ops > AWS(EC2), GCP, Firebase </p>
+          <p>Collaboration > Notion, Github </p>
+        </div>
+      </div>
+
+      <!-- 좌측 하단 =>  자주 사용하는 웹 페이지 위젯 -->
+      <div class="leftBottom">
+        <div class="wrapBottom">
+          <a href="https://google.com">
+            <div class="logo_div logo_google"></div>
+          </a>
+          <a href="https://www.youtube.com/">
+            <div class="logo_div logo_youtube"></div>
+          </a>
+          <a href="https://chat.openai.com/">
+            <div class="logo_div logo_chatgpt"></div>
+          </a>
+          <a href="https://www.naver.com/">
+            <div class="logo_div logo_naver"></div>
+          </a>
+        </div>
+        
+        <div class="wrapBottom">
+          <a href="https://stackoverflow.com/">
+            <div class="logo_div logo_stackoverflow"></div>
+          </a>
+          <a href="https://developer.mozilla.org/ko/">
+            <div class="logo_div logo_mdn"></div>
+          </a>
+          <a href="https://www.coupang.com/">
+            <div class="logo_div logo_coupang"></div>
+          </a>
+          <a href="https://www.musinsa.com/app/">
+            <div class="logo_div logo_musinsa"></div>
+          </a>
+
+        </div>
+      </div>
+
+
+      <!-- 가운데 => TO DO LIST -->
+      <div class="middle">
+        <div id="todo-list-text">
+          <h1>TO DO LIST</h1>  
+        </div> 
+
+        <div>
+          <form id="todo-form">
+            <input type="text" size=30 placeholder="할 일을 적어주세요" required />
+          </form>
+          
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+
+
+      <!-- 우측 => 깃허브 / VELOG / 노션 등 프로필 -->
+      <div class="right">
+        <div id="rightTitle">
+          <h1>About Irish</h1>
+        </div>
+
+        <div id="rightOne">
+          <h3>Career</h3>
+          <a href="https://www.gractor.com/">
+            <h4>Gractor</h4>
+          </a>
+          <h5>기간 : 2023.09.04 ~ Now</h5>
+          <h5>프로젝트 : 내부업무시스템</h5>
+          <h5>담당 : 화면 개발 / 시스템 설계 / DB 작업 </h5></br>
+
+          <h3>Team Project</h3>
+          <!-- Team Project One  -->
+          <a href="https://github.com/irishNoah/FarmSecurity/tree/main/FE%26BE">
+            <h4>1. 유해동물로 인한 농작물 피해 완화 시스템</h4>
+          </a>
+          <h5>> 기간 : 2022.04-2022.12</h5>
+          <h5>> 수상 : 한국정보기술학회 논문우수상 은상 및 동상</h5>
+
+          <!-- Team Project Tow  -->
+          <a href="https://github.com/irishNoah/SizeLab/tree/main/005_mainCodeReview">
+            <h4>2. 고객 피부색 및 신체 사이즈 기반의 의류 추천 시스템</h4>
+          </a>
+          <h5>> 기간 : 2021.04-2021.12</h5>
+          <a href="https://www.kais99.org/jkais/springNfall/autumn2021/poster/2021_autumn_180.pdf">
+            <h5>> 투고 : 체형 및 피부색에 적합한 의류 추천 시스템의 설계</h5>        
+          </a> </br>
+
+
+          <h3>Personal Project</h3>
+          <!-- Personal Project One -->
+          <h4>Vanilla JS 기반 개인 웹 제작 - 링크 게시 준비 중</h4>
+          <h4></h4>
+
+        </div>
+
+        <div id="rightWeather">
+          <div id="weatherTitle">
+            <h2>Weather</h2>
+          </div>
+          <!-- 날씨 API -->
+          <div id="weather">
+            <h2 style="color: azure;"></h2>
+            <h2 style="color: azure;"></h2>
+            
+            <img class="weatherIcon" />
+          </div> 
+        </div>
+
+      </div>
+
+      <!-- 최하단 => 유명 문구 -->
+      <div class="bottom">
+        <div id="quote">
+          <span class="fontFaceText"></span> <br>
+          <span class="fontFaceWriter"></span>
+        </div> 
+      </div>
+
+
+    </div>
+
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
+  </body>
+</html>

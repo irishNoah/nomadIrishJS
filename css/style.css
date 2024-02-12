@@ -1,0 +1,396 @@
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+@font-face { /* 온라인 폰트 적용 */
+    font-family: 'BMHANNAPro';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face { /* 온라인 폰트 적용 */
+    font-family: 'BMYEONSUNG';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMYEONSUNG.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.7); /* rgba(r, g, b, 투명도) */
+    margin:0;
+    padding:0;
+    font-family: 'BMHANNAPro';
+}
+
+h1 {
+    margin: 7px;
+    font-size: 25px;
+    color: orangered;
+}
+
+h2 {
+    margin: 7px;
+    font-size: 23px;
+    color: orangered;
+}
+
+h3 {
+    margin: 7px;
+    font-size: 21px;
+    color: orangered;
+}
+
+h4 {
+    margin: 5px;
+    font-size: 18px;
+    color: black;
+    font-family: 'BMYEONSUNG';
+}
+
+h5 {
+    margin: 5px;
+    font-size: 15px;
+    color: black;
+    font-family: 'BMYEONSUNG';
+}
+
+p {
+    margin: 5px;
+    font-size: 18px;
+}
+
+#background-image {
+    background-size: cover; 
+}
+
+#container {
+    width:1800px;
+    margin:auto;
+}
+
+.hidden{ /* 로그인 */
+    display:none;
+}
+
+div.top {
+    /* background: white; */
+    background: rgba(255, 255, 255, 0.8); /* rgba(r, g, b, 투명도) */
+    position: fixed;
+    width: 1768px;
+    height: 80px;
+    white-space: nowrap;            /* 글씨 줄바꿈 X */
+    overflow: hidden;               /* white-space 보조 역할 */
+    text-overflow: ellipsis;        /* white-space 보조 역할 */
+    text-align: center;             /* welcome 문구 TEXT 가운데 정렬*/
+}
+
+div.leftTop {
+    background: rgba(50, 100, 150, 0.8); /* rgba(r, g, b, 투명도) */
+    position: fixed;
+    width: 900px;
+    height: 340px;
+    top : 85px;
+    border-radius: 30px;
+    word-break: break-all; /* text길이가 width 길이보다 클 경우 다음줄로 넘기기 */
+}
+
+/* leftTop > 프로필 이미지 */
+#profileImg {
+    background-image: url(https://avatars.githubusercontent.com/u/80700537?v=4k);
+    /* 위의 width와 height 크기에 이미지를 맞추어 넣으려면 아래와 같이 작성
+    참고 : https://multifidus.tistory.com/182 */
+    background-size: contain; 
+    position: fixed;
+    display: inline-block;                  /* Div 안에 Div 넣기 > https://suhwi.tistory.com/8*/
+    width: 320px;
+    height: 320px;
+    top : 85px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+/* leftTop > 프로필 내용 */
+#profileContents{
+    position: fixed;
+    display: inline-block;
+    width: 550px;
+    height: 340px;
+    top : 85px;
+    margin-left: 340px;
+}
+
+div.leftBottom {
+    background: rgba(0, 0, 255, 0.8); /* rgba(r, g, b, 투명도) */
+    position: absolute;
+    width: 900px;
+    height: 340px;
+    top: 425px;
+    border-radius: 30px;
+    word-break: break-all; /* text길이가 width 길이보다 클 경우 다음줄로 넘기기 */
+}
+
+/* 추후에 div.middle / div.right의 width를 px 단위로 해야할 듯? */
+div.middle {
+    background: rgba(112, 112, 112, 0.8); /* rgba(r, g, b, 투명도) */
+    position: absolute;                     /* 상위 DIV = div.top */
+    width: 418px;
+    height: 680px;
+    top: 85px;
+    margin-left: 900px;
+    border-radius: 30px;
+    word-break: break-all; /* text길이가 width 길이보다 클 경우 다음줄로 넘기기 */
+}
+
+div.right {
+    background: rgba(150, 100, 50, 0.8); /* rgba(r, g, b, 투명도) */
+    position: absolute;                 /* 상위 DIV = div.top */
+    width: 450px; /* width: 420px; */
+    height: 680px;
+    top : 85px;
+    margin-left: 1318px;
+    border-radius: 30px;
+    word-break: break-all; /* text길이가 width 길이보다 클 경우 다음줄로 넘기기 */
+}
+
+div.bottom {
+    background: rgba(255, 0, 0, 0.8); /* rgba(r, g, b, 투명도) */
+    position: fixed;
+    width: 1768px;
+    top: 770px;
+    text-align: center;
+    white-space: nowrap;            /* 글씨 줄바꿈 X */
+    overflow: hidden;               /* white-space 보조 역할 */
+    text-overflow: ellipsis;        /* white-space 보조 역할 */
+}
+
+span.fontFaceText{
+    color:black;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 28pt;
+}
+
+span.fontFaceWriter{
+    color:blue;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 24pt;
+}
+
+/* 좌측 하단 - 각 로고 이미지별 크기 등 지정 */
+div.logo_div {
+    width: 128px;
+    height: 128px;
+    /* 위의 width와 height 크기에 이미지를 맞추어 넣으려면 아래와 같이 작성
+    참고 : https://multifidus.tistory.com/182 */
+    background-size: contain; 
+    display: inline-block;                  /* Div 안에 Div 넣기 > https://suhwi.tistory.com/8 */
+    margin: 20px;                           /* 상하좌우 여백 모두 동일하게 */
+}
+
+div.wrapBottom {                            /* leftBottom Div에서 한 라인당 4개의 로고만 두기 */
+    width: 900x;
+    height: 170px;
+    margin-left:75px;                       /* 좌측 여백만 두기 */
+}
+
+/***** 시작 - 각 로고별 url 할당 *****/
+div.logo_google {
+    background-image: url(https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-256.png);
+}
+div.logo_youtube {
+    background-image: url(https://icons.iconarchive.com/icons/dakirby309/simply-styled/128/YouTube-icon.png);
+}
+div.logo_chatgpt {
+    background-image: url(https://freelogopng.com/images/all_img/1681038242chatgpt-logo-png.png);
+}
+div.logo_naver {
+    background-image: url(https://cdn.icon-icons.com/icons2/652/PNG/128/naver_icon-icons.com_59879.png);
+}
+div.logo_stackoverflow {
+    background-image: url(https://cdn-icons-png.flaticon.com/128/2111/2111628.png);
+}
+div.logo_mdn {
+    background-image: url(https://iconape.com/wp-content/png_logo_vector/mdn.png);
+}
+div.logo_coupang {
+    background-image: url(https://brandlogos.net/wp-content/uploads/2022/04/coupang-logo-brandlogos.net_-512x512.png);
+}
+div.logo_musinsa {
+    background-image: url(https://static.msscdn.net/mfile_s01/fb/share_musinsa.png);
+}
+/***** 종료 - 각 로고별 url 할당 *****/
+
+/* 시작 - top Div에 있는 텍스트 관련 설정 */
+#topClock {
+    position: absolute;
+    width: 600px;
+    height: 80px;
+    line-height: 65px;              /* 글자 세로 정렬 - height의 절반 */
+}
+
+#topWelcome {
+    position: absolute;
+    width: 600px;
+    height: 80px;
+    margin-left: 600px;
+    line-height: 65px;              /* 글자 세로 정렬 - height의 절반 */
+}
+
+/* 종료 - top Div에 있는 텍스트 관련 설정 */
+
+/***** 시작 - 로그인 및 로그아웃 *****/
+#login {
+    position: absolute;
+    margin-left: 1200px;
+}
+
+#login p {
+    margin-left: 85%;
+    color: #a0a0a0;
+    font-family: 'BMYEONSUNG';
+    font-size: 20px;
+}
+
+#login p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#inputBox {
+    justify-content: center;
+    height: 30px;
+    margin-top: 25px;
+}
+
+#inputBox input {
+    background: #9a74e8;
+    width: 300px;
+    height: 30px;
+    font-family: 'BMYEONSUNG';
+    color: #f6f6f6;
+    font-size: 25px;
+    border: 2px solid #f6f6f6;
+    border-radius: 60px;
+    text-align: center;
+    outline: none;
+}
+
+#inputBox input:hover {
+    border: 2px solid #c5acf8;
+}
+
+#inputBox input::placeholder {
+    color: #f6f6f6;
+    font-family: 'BMYEONSUNG';
+}
+
+#loginBox, #logoutBox {
+    width: 100px;
+    margin-left: 320px;
+}
+
+#loginBox input {
+    background-color: #9a74e8;
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    margin-top: -25px;
+    border: 0px;
+    border-radius: 40px;
+    font-family: 'BMYEONSUNG';
+    font-size: 20px;
+}
+
+#logoutBox input {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    margin-top: 25px;
+    border-radius: 40px;
+    background-color: #9a74e8;
+    font-family: 'BMYEONSUNG';
+    font-size: 20px;
+    border: 0px;
+}
+
+#loginBox input:hover, #logoutBox input:hover {
+    cursor: pointer;
+    color: #f6f6f6;
+    background-color: #c5acf8;
+}
+
+#divGreeting { /* ID TEXT 가운데 정렬 */
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    margin-left: 100px;
+}
+
+#greeting { /* ID TEXT 가운데 정렬 */
+    position: absolute;
+    line-height: 65px;  
+}
+
+/***** 종료 - 로그인 및 로그아웃 *****/
+
+
+
+/***** 시작 - [TO DO LIST 입력창] 꾸미기 *****/
+#todo-list-text { /* 텍스트 div 가운데 정렬 */
+    display: flex;
+    justify-content: center;
+}
+
+#todo-form input { /* 입력창 */
+    background: transparent;
+    position: relative;
+    width: 300px;
+    left: 55px;
+    color: #f6f6f6;
+    font-family: 'BMHANNAPro';
+    font-size: 25px;
+    border: 2px solid #f6f6f6;
+    border-radius: 40px;
+    text-align: center;
+}
+
+#todo-form input::placeholder {
+    color: #f6f6f6;
+}
+
+.toDoText { /* 각 To Do 목록 글씨 관련 CSS */
+    color: #f6f6f6;
+    font-family: 'BMHANNAPro';
+    margin-top: 15px;
+    margin-left: 20px;
+    font-size: 20px;
+}
+/***** 종료 - [TO DO LIST 입력창] 꾸미기 *****/
+
+/***** 시작 - div.Right 세부 *****/
+#rightTitle{ /* 우측 - 타이틀 */
+    width: 450px; 
+    height: 50px;
+    line-height: 25px;
+    text-align: center;
+}    
+
+#rightOne{ /* 우측 1번째 - Velog */
+    width: 450px;
+    height: 400px;
+}
+
+
+#rightWeather{ /* 우측 3번째 - Weather*/
+    width: 450px;
+    height: 180px;
+}
+
+#weatherTitle{
+    text-align: center;
+}
+
+#weather{
+    margin-left: 50px;
+}
+
+/***** 종료 - div.Right 세부 *****/
